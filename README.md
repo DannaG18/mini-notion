@@ -2,7 +2,7 @@
 
 Mini-Notion es una aplicación simple de gestión de tareas diseñada para organizar actividades y proyectos de manera eficiente. Este proyecto está inspirado en Notion, ofreciendo funcionalidades básicas para crear, editar, y administrar tareas.
 
-![image-20241217002339668](C:\Users\danna\AppData\Roaming\Typora\typora-user-images\image-20241217002339668.png)
+![taskmanagerview](./assets/taskmanagerview.png)
 
 ## Características
 
@@ -12,9 +12,9 @@ Mini-Notion es una aplicación simple de gestión de tareas diseñada para organ
 - **Persistencia de datos**: Uso de SQLite para almacenar las tareas de manera local.
 - **Control de versiones**: Configuración de un repositorio Git para rastrear cambios en el proyecto.
 
-![image-20241217002407832](C:\Users\danna\AppData\Roaming\Typora\typora-user-images\image-20241217002407832.png)
+![imp-exp](./assets/imp-exp.png)
 
-![image-20241217002420029](C:\Users\danna\AppData\Roaming\Typora\typora-user-images\image-20241217002420029.png)
+![jsonphoto](./assets/jsonphoto.png)
 
 ## Estructura del Proyecto
 
