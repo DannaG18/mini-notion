@@ -21,15 +21,7 @@ Base = declarative_base()
 
 @contextmanager
 def get_db() -> Generator[Session, None, None]:
-    """
-    Provide a transactional scope around a series of operations.
-    
-    Yields a database session and handles committing or rolling back 
-    the transaction as appropriate.
-    
-    Raises:
-        Exception: If an error occurs during the database transaction
-    """
+
     db = SessionLocal()
     try:
         yield db
@@ -42,9 +34,7 @@ def get_db() -> Generator[Session, None, None]:
         db.close()
 
 def init_db() -> None:
-    """
-    Initialize the database by creating all tables defined in the models.
-    """
+
     try:
         Base.metadata.create_all(bind=engine)
         logger.info("Database initialized successfully")

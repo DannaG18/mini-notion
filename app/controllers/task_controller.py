@@ -6,16 +6,7 @@ from models.task_model import Task
 from loguru import logger
 
 def create_task(title: str, description: Optional[str] = None) -> Optional[Task]:
-    """
-    Create a new task with validation
-    
-    Args:
-        title (str): Task title
-        description (Optional[str]): Task description
-    
-    Returns:
-        Optional[Task]: Created task or None if creation failed
-    """
+
     try:
         with get_db() as db:
             new_task = Task(
@@ -34,15 +25,7 @@ def create_task(title: str, description: Optional[str] = None) -> Optional[Task]
         return None
 
 def get_tasks(status: Optional[str] = None) -> List[Task]:
-    """
-    Retrieve tasks, optionally filtered by status
-    
-    Args:
-        status (Optional[str]): Filter tasks by status
-    
-    Returns:
-        List[Task]: List of tasks
-    """
+
     try:
         with get_db() as db:
             query = db.query(Task)
@@ -54,16 +37,7 @@ def get_tasks(status: Optional[str] = None) -> List[Task]:
         return []
 
 def update_task_status(task_id: int, status: str) -> bool:
-    """
-    Update task status
-    
-    Args:
-        task_id (int): ID of the task to update
-        status (str): New status
-    
-    Returns:
-        bool: Whether update was successful
-    """
+
     try:
         with get_db() as db:
             task = db.query(Task).filter(Task.id == task_id).first()
@@ -80,15 +54,7 @@ def update_task_status(task_id: int, status: str) -> bool:
         return False
 
 def delete_task(task_id: int) -> bool:
-    """
-    Delete a task by its ID
-    
-    Args:
-        task_id (int): ID of the task to delete
-    
-    Returns:
-        bool: Whether deletion was successful
-    """
+
     try:
         with get_db() as db:
             task = db.query(Task).filter(Task.id == task_id).first()
