@@ -57,7 +57,7 @@ Asegúrate de tener instalados los siguientes requisitos:
 
 1. Ejecuta la aplicación:
    ```bash
-   streamlit run app.py
+   streamlit run app/main.py
    ```
 2. Abre tu navegador y ve a `http://localhost:8501` para usar la aplicación.
 
